@@ -16,8 +16,12 @@ if uploaded_file is not None:
     st.write(df)
 
 #3. Show dataset
-if st.checkbox("Show dataset summery"):
-    if st.button("Head"):
-        st.write(df.head())
-    if st.button("Tail"):
-        st.write(df.tail())
+if uploaded_file is not None:
+    if st.checkbox("Show dataset summery"):
+        if st.button("Head"):
+            st.write(df.head())
+        if st.button("Tail"):
+            st.write(df.tail())
+#4. check datatype of each column
+if st.checkbox("show datatype of each column"):
+    st.write(df.dtypes)
