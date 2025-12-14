@@ -41,3 +41,15 @@ if uploaded_file is not None:
 if uploaded_file is not None:
     if st.checkbox("Find the null values in the dataset"):
         st.write(df.isnull().sum()) 
+#7 . Find Duplicate values in the dataset
+if uploaded_file is not None:
+    if st.checkbox("Find Duplicate values in the dataset"):
+        st.write(df.duplicated().sum())
+#8 . Get overall statistics about the dataset
+if uploaded_file is not None:
+    if st.checkbox("Get overall statistics about the dataset"):
+        st.write(df.describe())
+#9 . About section
+    if st.button("About App"):
+         st.text("Built with Streamlit")
+         st.text("Created by Abrha G.")    
