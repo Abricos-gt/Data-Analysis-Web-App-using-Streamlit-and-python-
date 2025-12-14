@@ -23,5 +23,17 @@ if uploaded_file is not None:
         if st.button("Tail"):
             st.write(df.tail())
 #4. check datatype of each column
-if st.checkbox("show datatype of each column"):
-    st.write(df.dtypes)
+if uploaded_file is not None:
+    if st.checkbox("show datatype of each column"):
+        st.text("Data Types")
+        st.write(df.dtypes)
+#5. find the shape of the datset
+
+
+if uploaded_file is not None:
+    if st.checkbox("Find the shape of the dataset"):
+        data_shape = st.radio("Show Dimension By", ("Rows", "Columns"))
+        if data_shape == 'Rows':
+            st.write(f"Number of Rows: {df.shape[0]}")
+        elif data_shape == 'Columns':
+            st.write(f"Number of Columns: {df.shape[1]}")   
