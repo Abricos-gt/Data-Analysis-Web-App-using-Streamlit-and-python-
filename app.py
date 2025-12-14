@@ -52,4 +52,7 @@ if uploaded_file is not None:
 #9 . About section
     if st.button("About App"):
          st.text("Built with Streamlit")
-         st.text("Created by Abrha G.")    
+         st.text("Thanks to streamlit community")  
+#10. By
+    if st.button("By"):
+         st.text("Abrha G.")  
