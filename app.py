@@ -14,3 +14,10 @@ uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
     st.write(df)
+
+#3. Show dataset
+if st.checkbox("Show dataset summery"):
+    if st.button("Head"):
+        st.write(df.head())
+    if st.button("Tail"):
+        st.write(df.tail())
