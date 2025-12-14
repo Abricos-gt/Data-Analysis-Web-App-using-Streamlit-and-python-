@@ -37,3 +37,7 @@ if uploaded_file is not None:
             st.write(f"Number of Rows: {df.shape[0]}")
         elif data_shape == 'Columns':
             st.write(f"Number of Columns: {df.shape[1]}")   
+#6 . Find the null values in the dataset
+if uploaded_file is not None:
+    if st.checkbox("Find the null values in the dataset"):
+        st.write(df.isnull().sum()) 
